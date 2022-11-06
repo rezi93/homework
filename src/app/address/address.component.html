@@ -1,0 +1,12 @@
+<div>
+<div class="block">
+    <h3>contact</h3>
+    <div class="info">
+    <p>street is:{{studentAddress.street}}</p>
+    <p>zipcode is:{{studentAddress.zipcode}}</p>
+</div>
+<div class="change">
+    <input class="input-change" type="text"   [(ngModel)]="studentAddress.city">
+    <button (click)="changevalue()"   type="button" class="btn-change">CHANGE</button>
+</div>
+</div>
