@@ -5,11 +5,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AddressComponent } from './address/address.component';
+import { NewkompComponent } from './newkomp/newkomp.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AddressComponent
+    AddressComponent,
+    NewkompComponent
   ],
   imports: [
     BrowserModule,

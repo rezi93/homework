@@ -13,3 +13,7 @@ export interface Iaddress{
     city: string,
     zipcode:number
 }
+
+export interface IcheckNums{
+    
+}
