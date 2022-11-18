@@ -11,7 +11,7 @@ export class AddressComponent implements OnInit,OnChanges {
   
   @Output() changeCity:EventEmitter<boolean>=new EventEmitter(false);
   newValue:string='';
-
+  
   constructor() { 
     this.studentAddress={
       street: '',
@@ -39,6 +39,7 @@ export class AddressComponent implements OnInit,OnChanges {
     this.changeCity.emit(true)
   }
 
+ 
 
   }
 

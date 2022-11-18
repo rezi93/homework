@@ -7,12 +7,16 @@ import { AppComponent } from './app.component';
 import { AddressComponent } from './address/address.component';
 import { NewkompComponent } from './newkomp/newkomp.component';
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
     AddressComponent,
     NewkompComponent
-  ],
+  
+   
+   ],
   imports: [
     BrowserModule,
     AppRoutingModule,

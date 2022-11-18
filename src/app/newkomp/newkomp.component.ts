@@ -6,32 +6,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./newkomp.component.css']
 })
 export class NewkompComponent implements OnInit {
- 
-   check: number[]=[]
 
-  constructor() { 
-    // this.check=[]
-   
-  }
+  num:number[]=[1,2,3,4,5,6,75,22]
+
+  constructor() { }
 
   ngOnInit(): void {
-    console.log(this.check);
-    
-    
   }
-  chekNumber(){
-   
-     let x = Math.random();
- 
-if (x % 2 === 0) {
-    console.log(x +" is even number");
-     
-} else {
-    console.log(x+" is Odd Number");
-    
-}
-
-}
+  getResult(num:number):boolean{
+    if(num%2===0){
+      return true
+    }else{
+      return false
+    }
   }
 
 
+}
