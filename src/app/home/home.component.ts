@@ -1,14 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-newkomp',
-  templateUrl: './newkomp.component.html',
-  styleUrls: ['./newkomp.component.css']
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.css']
 })
-export class NewkompComponent implements OnInit {
-
+export class HomeComponent implements OnInit {
   num:number[]=[1,2,3,4,5,6,75,22]
-
   constructor() { }
 
   ngOnInit(): void {
