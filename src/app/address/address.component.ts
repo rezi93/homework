@@ -1,5 +1,5 @@
 import { AfterViewInit, Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
-import { Iaddress } from '../personData.interface';
+import { Iaddress } from './personData.interface';
 
 @Component({
   selector: 'app-address',

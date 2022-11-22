@@ -9,24 +9,25 @@ import { AddressComponent } from './address/address.component';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { SignInComponent } from './sign-in/sign-in.component';
+import { MainComponent } from './main/main.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { MainModule } from './main/main.module';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    AddressComponent,
-  
-    HeaderComponent,
-    HomeComponent,
-    SignInComponent
+    
+    MainComponent,
+         PagenotfoundComponent
   
    
    ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    MainModule
   ],
   providers: [],
   bootstrap: [AppComponent]

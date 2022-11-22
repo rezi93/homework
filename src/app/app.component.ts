@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { IpersonData } from './personData.interface';
+import { IpersonData } from './address/personData.interface';
 
 @Component({
   selector: 'app-root',
