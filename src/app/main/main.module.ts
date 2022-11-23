@@ -4,15 +4,16 @@ import { AddressComponent } from '../address/address.component';
 import { SignInComponent } from '../sign-in/sign-in.component';
 import { HomeComponent } from '../home/home.component';
 import { HeaderComponent } from '../header/header.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RoutingModule } from './routing/routing.module';
+import { MainComponent } from './main.component';
 
 
 
 @NgModule({
   declarations: [
     AddressComponent,
-
+    
     HeaderComponent,
     HomeComponent,
     SignInComponent
@@ -22,13 +23,15 @@ import { RoutingModule } from './routing/routing.module';
     CommonModule,
     FormsModule,
     RoutingModule
+    
   ],
   exports:[
     AddressComponent,
-
+    
     HeaderComponent,
     HomeComponent,
-    SignInComponent
+    SignInComponent,
+    ReactiveFormsModule
   ]
 })
 export class MainModule { }

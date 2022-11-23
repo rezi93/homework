@@ -1,0 +1,51 @@
+.image{
+    width: 250px;
+    height: 250px;
+    margin-left: 30px;
+    margin-top: 20px;
+    
+}
+.product{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    height: 50%;
+
+}
+.img{
+    width: 250px;
+    height: 250px;
+}
+.text{
+    width: 200px;
+    height: 200px;
+    margin-left: 30px;
+    margin-top: 10px;
+}
+.pro-title{
+    margin-top: 15px;
+    margin-left: 30px;
+    color: brown;
+    
+}
+
+.form-box{
+    width: 50%;
+    height: 50%;
+    
+}
+.block{
+    width: 100%;
+    display: flex;
+    margin-top: 1%;
+}
+.form-select{
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+.btn {
+    margin-top: 25px;
+    width: 200px;
+    font-size: 23px;
+    font-weight: 600;
+}

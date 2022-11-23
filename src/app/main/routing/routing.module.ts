@@ -1,12 +1,28 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HomeComponent } from 'src/app/home/home.component';
-import { RouterModule, Routes } from '@angular/router';
+import { Route, RouterModule, Routes } from '@angular/router';
+import { SignInComponent } from 'src/app/sign-in/sign-in.component';
+import { PagenotfoundComponent } from 'src/app/pagenotfound/pagenotfound.component';
+import { MainComponent } from '../main.component';
 
-const routes: Routes = [
+const routes: Route[] = [
   {
-    path:"Home",
-    component: HomeComponent
+
+    path:'',
+    component: MainComponent,
+    children: [
+      {
+        path: 'home',
+        component: HomeComponent
+      },
+      {
+        path: 'sign-in',
+        component: SignInComponent
+      }
+    ],
+  
+
   }
 ];
 
@@ -14,6 +30,7 @@ const routes: Routes = [
   declarations: [],
   imports: [
     RouterModule.forChild(routes)
-  ]
+  ],
+  exports:[RouterModule]
 })
 export class RoutingModule { }
