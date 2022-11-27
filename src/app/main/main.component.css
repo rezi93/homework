@@ -9,7 +9,8 @@
     display: flex;
     flex-direction: column;
     width: 40%;
-    height: 50%;
+    
+    
 
 }
 .img{
@@ -30,14 +31,19 @@
 }
 
 .form-box{
-    width: 50%;
-    height: 50%;
+    width: 60%;
+     
     
+}
+.form-label{
+    color: white;
 }
 .block{
     width: 100%;
+    height: 100%;
     display: flex;
-    margin-top: 1%;
+   
+    background-color: rgb(18, 18, 19);
 }
 .form-select{
     margin-top: 25px;
@@ -45,7 +51,42 @@
 }
 .btn {
     margin-top: 25px;
+    margin-bottom: 5px;
     width: 200px;
+    height: 61px;
     font-size: 23px;
     font-weight: 600;
+}
+.email{
+    display: flex;
+    flex-direction: column;
+    width: 310px;
+}
+.descr{
+    width: 700px;
+}
+desc{
+    color: white;
+}
+.date{
+    margin-left: 50%;
+    color: white;
+    font-size: 22px;
+}
+input.ng-invalid.ng-touched{
+    border: red 1px solid;
+}
+.error{
+    display: block;
+    color: red;
+}
+.fill{
+    color: goldenrod;
+    font-size: 25px;
+    
+}
+.star{
+    width: 100px;
+    height: 30px;
+    display: flex;
 }

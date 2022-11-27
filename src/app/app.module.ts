@@ -18,7 +18,7 @@ import { MainModule } from './main/main.module';
 @NgModule({
   declarations: [
     AppComponent,
-    
+    AddressComponent,
     MainComponent,
     PagenotfoundComponent
   

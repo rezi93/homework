@@ -1,1 +1,6 @@
-<h3>home work</h3>
+
+<div class="star" *ngFor="let star of starMaxNum"
+[ngClass]="star<=rateNum ?'fill':''">
+    <i class="bi bi-star" (click)="getRateNum(star)"></i>
+    
+  </div>

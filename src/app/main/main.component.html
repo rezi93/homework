@@ -1,4 +1,4 @@
-<app-header></app-header>
+
 <router-outlet></router-outlet>
 <div class="block">
     <div class="product">
@@ -6,57 +6,71 @@
       <img class="img" src="https://images.unsplash.com/photo-1581955957646-b5a446b6100a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Z3VufGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="">
     </div>
     <h4 class="pro-title">MS-89</h4>
-    <h5 class="pro-title">Price:</h5>
+    <div class="star" *ngFor="let star of starMaxNum"
+[ngClass]="star<=rateNum ?'fill':''">
+    <i class="bi bi-star" (click)="getRateNum(star)"></i>
+    
+  </div>
     <span class="text">
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, rerum? Corrupti praesentium velit dolorem facilis aperiam nesciunt ducimus dignissimos non, pariatur minus ex sequi debitis dolorum quidem, nihil sit harum.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
     </span>
     </div>
       <div class="form-box">
         <form [formGroup]="surveyform"  (ngSubmit)="onSubmit()">
         <div class="col-md-4">
             <label for="validationCustom01" class="form-label">First name</label>
-            <input type="text" class="form-control" id="validationCustom01" value="Mark" required>
-            <div class="valid-feedback">
-              
+            <input type="text" class="form-control" id="validationCustom01"  formControlName="firstName">
+            <div >
+              <span class="error" *ngIf="!surveyform.get('firstName')?.valid && surveyform.get('firstName')?.touched"
+              >enter your name</span>
             </div>
           </div>
           <div class="col-md-4">
             <label for="validationCustom02" class="form-label">Last name</label>
-            <input type="text" class="form-control" id="validationCustom02" value="Otto" required>
-            <div class="valid-feedback">
-              
+            <input type="text" class="form-control" id="validationCustom02"  formControlName="lastName">
+            <div >
+              <span class="error"  *ngIf="!surveyform.get('lastName')?.valid && surveyform.get('lastName')?.touched">enter your lastname</span>
             </div>
           </div>
-          <div class="col-md-4">
+          <div class="email">
             <label for="validationCustomUsername" class="form-label">Email</label>
             <div class="input-group has-validation">
-              <span class="input-group-text" id="inputGroupPrepend">@</span>
-              <input type="email" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
-              <div class="invalid-feedback">
-                Please enter Email.
+             
+              <input type="email" class="form-control"  id="validationCustomUsername"  formControlName="email">
+              <div >
+                <span class="error" *ngIf="!surveyform.get('email')?.valid && surveyform.get('email')?.touched">enter your email</span>
               </div>
             </div>
           </div>
           
           <div class="col-md-3">
-            <select class="form-select" aria-label="Default select example">
-              <option selected>Open this select menu</option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
+            
+            <select class="form-select" aria-label="choose" formControlName="selectMenu">
+              
+              <option value="1">Satisfied</option>
+              <option value="2">Unsatisfied</option>
+              <option value="3">Neutral</option>
             </select>
-            <div class="invalid-feedback">
-              Please select .
+            <div >
+              <span class="error" *ngIf="!surveyform.get('selectMenu')?.valid && surveyform.get('selectMenu')touched">please select</span>
+            
             </div>
           </div>
-          <div class="form-floating">
-            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
-            <label for="floatingTextarea2">Comments</label>
+          <div class="descr">
+            <label class="desc" for="floatingTextarea2">Comments</label>
+            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px" formControlComments=" comments"></textarea>
+           
           </div>
+          <div>
+            <span class="error" *ngIf="!surveyform.get('comments')?.valid && surveyform.get('comments')?.touched">write your rate</span>
+          </div>
+          
       
       
       <div class="col-12">
         <button class="btn btn-primary" type="submit">Submit </button>
+        <span class="date">{{date|date:'short'}}</span>
+        
       </div>
         </form>
       </div>

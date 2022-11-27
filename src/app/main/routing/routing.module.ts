@@ -7,11 +7,9 @@ import { PagenotfoundComponent } from 'src/app/pagenotfound/pagenotfound.compone
 import { MainComponent } from '../main.component';
 
 const routes: Route[] = [
-  {
+  
 
-    path:'',
-    component: MainComponent,
-    children: [
+    
       {
         path: 'home',
         component: HomeComponent
@@ -19,11 +17,17 @@ const routes: Route[] = [
       {
         path: 'sign-in',
         component: SignInComponent
-      }
-    ],
+      },
+      
+    
+    
   
-
+  
+  {
+    path:'**',
+    component:PagenotfoundComponent
   }
+  
 ];
 
 @NgModule({

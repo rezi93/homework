@@ -1,0 +1,10 @@
+.fill{
+    color: goldenrod;
+    font-size: 25px;
+    
+}
+.star{
+    width: 100px;
+    height: 30px;
+    display: flex;
+}
