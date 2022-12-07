@@ -7,6 +7,13 @@ import { Route, RouterModule, Routes } from '@angular/router';
 import { MainComponent } from '../main.component';
 
 const routes: Route[] = [
+  {
+path:'',
+component:MainComponent
+  }
+]
+
+
   
 
     
@@ -19,7 +26,6 @@ const routes: Route[] = [
   
   
   
-];
 
 @NgModule({
   declarations: [],

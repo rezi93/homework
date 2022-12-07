@@ -13,6 +13,7 @@ import { MainComponent } from './main/main.component';
 import { PagenotfoundComponent} from './pagenotfound/pagenotfound.component';
 import { MainModule } from './main/main.module';
 import { RegistComponent } from './register/regist/regist.component';
+import { RoutingModule } from './main/routing/routing.module';
 
 
 
@@ -29,6 +30,7 @@ import { RegistComponent } from './register/regist/regist.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    RoutingModule,
     MainModule,
     FormsModule
     

@@ -7,10 +7,9 @@
                     <label>Title</label>
                     <select formControlName="title" class="form-control" >
                         <option value=""></option>
-                        <option value="Mr">Mr</option>
-                        <option value="Mrs">Mrs</option>
-                        <option value="Miss">Miss</option>
-                        <option value="Ms">Ms</option>
+                        <option value="Mr">Male</option>
+                        <option value="Mrs">Female</option>
+                       
                     </select>
                     <div  class="invalid-feedback">
                         <div >Title is required</div>
@@ -60,7 +59,7 @@
             <div class="form-group form-check">
                 <input type="checkbox" formControlName="acceptTerms" id="acceptTerms" class="form-check-input"  />
                 <label for="acceptTerms" class="form-check-label">Accept Terms & Conditions</label>
-                <!-- <div *ngIf="submitted && acceptTerms.errors" class="invalid-feedback">Accept Ts & Cs is required</div> -->
+                
             </div>
             <div class="text-center">
                 <button class="btn btn-primary mr-1">Register</button>
